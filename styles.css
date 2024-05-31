@@ -1,0 +1,254 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url(imagenes/artemochica.jfif);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 10;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-image: url(imagenes/artemochica.jfif);
+    color: #fff;
+    padding: 20px;
+    display: none;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+}
+
+.sidebar ul li a:hover {
+    background-color: rgba(223, 0, 0, 0.1);
+}
+
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    width: 200px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.accordion {
+    margin-top: 20px;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    background-image: url(imagenes/artemochica.jfif);
+    color: #f7f7f7;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+footer {
+    background-image: url(imagenes/artemochica.jfif);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+form {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-image: url(imagenes/artemochica.jfif);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#calendario {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#calendario h2 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 24px;
+}
+
+#calendario p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.event {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event h3 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+}
+
+.event p {
+    margin-bottom: 5px;
+    color: #666;
+    font-size: 14px;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+@media (max-width: 890px) {
+    .nav ul {
+        display: none;
+        color: #ccc;
+
+    }
+
+    .hamburger-menu {
+        display: flex;
+        color: #ccc;
+    }
+
+    .sidebar {
+        display: block;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        color: #ccc;
+
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+        color: #ccc;
+
+    }
+}
